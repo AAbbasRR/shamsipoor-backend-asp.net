@@ -3,16 +3,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - exercise1</title>
+    <title>@ViewData["Title"] - Abbas Rahimzadeh</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/exercise1.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Abbas_Rahimzadeh.styles.css" asp-append-version="true" />
+    
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"/> 
+    <link type="text/css" rel="stylesheet" href="~/lib/mpdatepicker/dist/jquery.mpdatepicker.min.css"/>
 </head>
 <body>
-    <header>
+    <header> 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">exercise1</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Abbas Rahimzadeh</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,13 +27,16 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">خانه</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">حریم خصوصی</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">قوانین</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Aboutus">درباره ما</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ContactUs">تماس با ما</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Games">بازی ها</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Shop">فروشگاه</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AboutUs">درباره ما</a>
                         </li>
                     </ul>
                 </div>
@@ -44,12 +51,33 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Abbas Rahimzadeh Server Side - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - عباس رحیم زاده - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/lib/mpdatepicker/dist/jquery.mpdatepicker.min.js"></script>
+    <script>
+        $(function () {
+            $(".sample-date-picker").mpdatepicker({
+                'timePicker': true,
+                onOpen: function () {
+                    console.log('open');
+                },
+                onSelect: function (selected) {
+                    console.log('select', selected);
+                },
+                onChange: function (oldVal, newVal) {
+                    console.log('change', oldVal, newVal);
+                },
+                onClose: function () {
+                    console.log('close');
+                },
+            });
+            
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

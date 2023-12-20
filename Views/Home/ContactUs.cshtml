@@ -1,0 +1,38 @@
+@model IEnumerable<Users>
+@{
+    ViewData["Title"] = "ContactUs";
+}
+<form asp-controller="Home" asp-action="SaveUser" method="post">
+    <input type="text" placeholder="نام" name="Name" />
+    <input type="email" placeholder="ایمیل" name="Email" />
+    <input type="password" placeholder="رمز" name="Password" />
+    <input class="sample-date-picker bg-white w-100 p-3" style="width: 170px !important;height: 34px;border: 1px solid black;border-radius: 3px;" name="Birthday" placeholder="تاریخ" type="text" id="date">
+    <input type="submit" class="btn btn-primary" value="ذخیره" />
+</form>
+<table class="table table-responsive">
+<h5>Count Of Users: @ViewBag.countUser</h5>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Birthday</th>
+                <th>Password</th>
+            </tr>
+            @foreach(var item in Model){
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.Email</td>
+                        <td>@item.Birthday</td>
+                        <td>@item.Password</td>
+                    </tr>
+                
+            }
+</table>
+<h1>تماس به ما</h1>
+<p>09191234567</p>
+
+  
+     
+
+   

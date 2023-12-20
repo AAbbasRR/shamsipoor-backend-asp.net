@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
+
+namespace Abbas_Rahimzadeh.Models
+{
+    public class Products
+    {
+        [Required]
+        [Key]
+        public int Id {get;set;}
+
+
+        [Required]
+        [StringLength(255)]
+        public string picPath {get;set;}
+
+
+        [Required]
+        [StringLength(255)]
+        public string? title {get;set;}
+
+
+        [StringLength(255)]
+        public string? price {get;set;}
+
+
+        [StringLength(255)]
+        public string? count {get;set;}
+
+
+
+        [StringLength(255)]
+        public string? description {get;set;}
+    }
+}
