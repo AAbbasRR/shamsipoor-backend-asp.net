@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Abbas_Rahimzadeh.Models;
+using Abbas_Rahimzadeh_Dotnet.Models;
 
-namespace Abbas_Rahimzadeh.Repository
+namespace Abbas_Rahimzadeh_Dotnet.Repository
 {
     public interface IProductRepository
     {

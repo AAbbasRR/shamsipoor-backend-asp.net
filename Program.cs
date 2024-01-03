@@ -1,4 +1,4 @@
-using Abbas_Rahimzadeh.Models;
+using Abbas_Rahimzadeh_Dotnet.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

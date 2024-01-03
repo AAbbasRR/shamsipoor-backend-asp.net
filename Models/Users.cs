@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DNTPersianUtils.Core;
 using MD.PersianDateTime;
 
-namespace Abbas_Rahimzadeh.Models
+namespace Abbas_Rahimzadeh_Dotnet.Models
 {
     public class Users
     {

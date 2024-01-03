@@ -4,7 +4,7 @@ using System.Linq;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 
-namespace Abbas_Rahimzadeh.Models
+namespace Abbas_Rahimzadeh_Dotnet.Models
 {
     public class Contact
     {

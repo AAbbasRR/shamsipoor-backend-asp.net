@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Abbas_Rahimzadeh.Models;
+using Abbas_Rahimzadeh_Dotnet.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Abbas_Rahimzadeh.Repository
+namespace Abbas_Rahimzadeh_Dotnet.Repository
 {
     public class ProductRepository : IProductRepository
     {

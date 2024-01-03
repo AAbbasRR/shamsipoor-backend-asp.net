@@ -1,4 +1,4 @@
-namespace Abbas_Rahimzadeh.Models;
+namespace Abbas_Rahimzadeh_Dotnet.Models;
 
 public class ErrorViewModel
 {

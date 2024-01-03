@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Abbas_Rahimzadeh.Models;
+using Abbas_Rahimzadeh_Dotnet.Models;
 
 
-namespace Abbas_Rahimzadeh.Controllers;
+namespace Abbas_Rahimzadeh_Dotnet.Controllers;
 
 public class HomeController : Controller
 {
@@ -42,43 +42,7 @@ public class HomeController : Controller
 
         return View(query);
     }
-    public IActionResult Shop()
-    {
-        List<Products> ListProducts = new List<Products>();
-
-        Products product1 = new Products();
-        product1.Id = 1;
-        product1.picPath = "/Images/1.webp";
-        product1.title = "Iphone 13";
-        product1.price = "10 tomn";
-        product1.count = "3";
-        product1.description = "آیفون 1";
-        ListProducts.Add(product1);
-
-        Products product2 = new Products();
-        product2.Id = 2;
-        product2.picPath = "/Images/2.jpg";
-        product2.title = "Iphone 14";
-        product2.price = "14 tomn";
-        product2.count = "2";
-        product2.description = "آیفون 2";
-        ListProducts.Add(product2);
-
-        Products product3 = new Products();
-        product3.Id = 3;
-        product3.picPath = "/Images/3.jpg";
-        product3.title = "Iphone 13";
-        product3.price = "30 tomn";
-        product3.count = "6";
-        product3.description = "آیفون 3";
-        ListProducts.Add(product3);
-
-        var query = ListProducts.ToList();
-
-        return View(query);
-
-    }
-
+  
     public IActionResult AboutUs()
     {
         return View();

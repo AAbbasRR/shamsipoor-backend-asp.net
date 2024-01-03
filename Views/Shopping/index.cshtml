@@ -1,0 +1,44 @@
+@model IEnumerable<Abbas_Rahimzadeh_Dotnet.Models.Products>
+@{
+    ViewData["Title"] = "Shop";
+}
+<h1>فروشگاه</h1>
+<p>محصولات</p> 
+
+<form asp-action="SaveForms" asp-controller="Shopping" method="post" enctype="multipart/form-data" class="create-product-form">
+    <h6>اضافه کردن محصول</h6>
+    <hr />
+    <input type="text" name="title" placeholder="Title" />
+    <input type="number" name="price" placeholder="Price" />
+    <input type="number" name="offPrice" placeholder="Off Price" />
+    <input type="text" name="count" placeholder="Count" />
+    <input type="text" name="description" placeholder="Desc" />
+    <hr />
+    <input type="file" class="file-form-input" name="pic" placeholder="Pic" />
+    <br />
+    <input type="submit" class="btn btn-primary form-submit" />
+</form>
+<table class="table table-responsive">
+            <tr>
+                <th>Id</th>
+                <th>عکس</th>
+                <th>نام</th>
+                <th>قیمت</th>
+                <th>بعد تخفیف</th>
+                <th>تعداد</th>
+                <th>توضیحات</th>
+            </tr>
+            @{
+                foreach(var item in Model){
+                    <tr>
+                        <td>@item.Id</td>
+                        <td><img style="width: 100px;height:100px" src="@item.picPath" /></td>
+                        <td>@item.title</td>
+                        <td style="text-decoration: line-through;">@item.price</td>
+                        <td><span  style="text-align:center; background-color: red; color: white; font-weight: bold; padding: 4px;border-radius: 7.2px;">@item.offPrice</span></td>
+                        <td>@item.count</td>
+                        <td>@item.description</td>
+                    </tr>
+                }
+            }
+</table>
